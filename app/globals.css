@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  background-color: #0B0F17;
+  color: #E7EBF2;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.font-display {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+/* ---- Leaflet dark theme ---- */
+.leaflet-tile-pane {
+  filter: brightness(0.62) contrast(1.05) saturate(0.85) invert(1) hue-rotate(180deg);
+}
+.leaflet-container {
+  background: #0B0F17 !important;
+  font-family: 'Inter', sans-serif;
+}
+.leaflet-popup-content-wrapper, .leaflet-popup-tip {
+  background: transparent;
+  box-shadow: none;
+}
+
+.price-marker {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(18, 24, 38, 0.9);
+  border: 1px solid rgba(45, 212, 191, 0.35);
+  backdrop-filter: blur(6px);
+  color: #E7EBF2;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.35);
+}
+.price-marker:hover {
+  transform: translateY(-2px) scale(1.04);
+  border-color: rgba(45, 212, 191, 0.9);
+}
+.price-marker.active {
+  background: #2DD4BF;
+  color: #0B0F17;
+  border-color: #2DD4BF;
+}
+.price-marker.featured {
+  border: 2px solid #FB7185;
+  box-shadow: 0 0 14px rgba(251, 113, 133, 0.55);
+}
+
+.poi-marker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: rgba(251, 113, 133, 0.15);
+  border: 1px solid rgba(251, 113, 133, 0.5);
+  color: #FB7185;
+}
+
+.thin-scroll::-webkit-scrollbar { width: 6px; }
+.thin-scroll::-webkit-scrollbar-thumb { background: #2A3347; border-radius: 999px; }
