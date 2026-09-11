@@ -90,3 +90,4 @@ Point Click / Payme / Stripe webhook URLs to:
 - The city page tries Supabase first and falls back to `data/mockHotels.js` automatically — so the demo works even before you connect a real database.
 - To move from Leaflet to Mapbox GL JS (for real 3D buildings), swap `MapComponent.jsx`'s internals only — no other component needs to change, since they only pass `hotels`, `city`, and selection callbacks as props.
 - Add Supabase Auth (`supabase.auth.signInWithOAuth`) to let users post reviews under their own account, matching the RLS policies already defined in `schema.sql`.
+  
